@@ -7,9 +7,12 @@
 //
 
 #import "HomeViewController.h"
+#import "WeiboModel.h"
 
 @interface HomeViewController ()
-
+{
+    NSMutableArray *_cellDataArray;
+}
 @end
 
 @implementation HomeViewController
@@ -69,7 +72,9 @@
 // 网络加载完成
 - (void)request:(SinaWeiboRequest *)request didFinishLoadingWithResult:(id)result
 {
-    NSLog(@"网络加载成功：%@", result);
+//    NSLog(@"网络加载成功：%@", result);
+  
+    _cellDataArray = [WeiboModel parsingWithDataForDictionary:result];
 }
 
 

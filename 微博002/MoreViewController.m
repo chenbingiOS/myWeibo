@@ -60,7 +60,7 @@
     if (indexPath.row == 0) {
         ThemeViewController *themeVC = [[ThemeViewController alloc] init];
         [self.navigationController pushViewController:themeVC animated:YES];
-//        [themeVC release];
+        [themeVC release];
     }
 }
 

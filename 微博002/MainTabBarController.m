@@ -120,7 +120,6 @@
     
 }
 
-
 #pragma mark - SinaWeibo Delegate
 - (void)sinaweiboDidLogIn:(SinaWeibo *)sinaweibo
 {
@@ -131,6 +130,7 @@
                               sinaweibo.expirationDate, @"ExpirationDateKey",
                               sinaweibo.userID, @"UserIDKey",
                               sinaweibo.refreshToken, @"refresh_token", nil];
+    
     [[NSUserDefaults standardUserDefaults] setObject:authData forKey:@"SinaWeiboAuthData"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }

@@ -86,7 +86,7 @@
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
     
-    return cell;
+    return [cell autorelease];
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

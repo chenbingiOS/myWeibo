@@ -532,6 +532,11 @@
 		BC7FFF8419EBE3FB00E82FD8 /* WXBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7FFF8319EBE3FB00E82FD8 /* WXBaseModel.m */; };
 		BCD4A64819EF6C6200C915BF /* ThemeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD4A64719EF6C6200C915BF /* ThemeLabel.m */; };
 		BCD4A64A19EF79CC00C915BF /* fontColor.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCD4A64919EF79CC00C915BF /* fontColor.plist */; };
+		BCD4A64D19EFB3E300C915BF /* WeiboModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD4A64C19EFB3E300C915BF /* WeiboModel.m */; };
+		BCD4A65019EFB77A00C915BF /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD4A64F19EFB77A00C915BF /* UserModel.m */; };
+		BCD4A65319EFB8C700C915BF /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD4A65219EFB8C700C915BF /* BaseModel.m */; };
+		BCD4A65619EFE41700C915BF /* WeiboView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD4A65519EFE41700C915BF /* WeiboView.m */; };
+		BCD4A65919EFE42C00C915BF /* WeiboCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD4A65819EFE42C00C915BF /* WeiboCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1113,6 +1118,16 @@
 		BCD4A64619EF6C6200C915BF /* ThemeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeLabel.h; sourceTree = "<group>"; };
 		BCD4A64719EF6C6200C915BF /* ThemeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeLabel.m; sourceTree = "<group>"; };
 		BCD4A64919EF79CC00C915BF /* fontColor.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fontColor.plist; sourceTree = "<group>"; };
+		BCD4A64B19EFB3E300C915BF /* WeiboModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboModel.h; sourceTree = "<group>"; };
+		BCD4A64C19EFB3E300C915BF /* WeiboModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboModel.m; sourceTree = "<group>"; };
+		BCD4A64E19EFB77A00C915BF /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		BCD4A64F19EFB77A00C915BF /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		BCD4A65119EFB8C700C915BF /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		BCD4A65219EFB8C700C915BF /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		BCD4A65419EFE41700C915BF /* WeiboView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboView.h; sourceTree = "<group>"; };
+		BCD4A65519EFE41700C915BF /* WeiboView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboView.m; sourceTree = "<group>"; };
+		BCD4A65719EFE42C00C915BF /* WeiboCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboCell.h; sourceTree = "<group>"; };
+		BCD4A65819EFE42C00C915BF /* WeiboCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1436,8 +1451,14 @@
 		BC7FFF7E19EBE3C200E82FD8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BCD4A65119EFB8C700C915BF /* BaseModel.h */,
+				BCD4A65219EFB8C700C915BF /* BaseModel.m */,
 				BC7FFF8219EBE3FB00E82FD8 /* WXBaseModel.h */,
 				BC7FFF8319EBE3FB00E82FD8 /* WXBaseModel.m */,
+				BCD4A64B19EFB3E300C915BF /* WeiboModel.h */,
+				BCD4A64C19EFB3E300C915BF /* WeiboModel.m */,
+				BCD4A64E19EFB77A00C915BF /* UserModel.h */,
+				BCD4A64F19EFB77A00C915BF /* UserModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -1445,6 +1466,10 @@
 		BC7FFF8019EBE3D400E82FD8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BCD4A65719EFE42C00C915BF /* WeiboCell.h */,
+				BCD4A65819EFE42C00C915BF /* WeiboCell.m */,
+				BCD4A65419EFE41700C915BF /* WeiboView.h */,
+				BCD4A65519EFE41700C915BF /* WeiboView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -2530,6 +2555,7 @@
 				BC7F03A419EBFA0100E82FD8 /* JSONKit.m in Sources */,
 				BC7FFF6019EBE3B300E82FD8 /* AppDelegate.m in Sources */,
 				BC7F037E19EBE79D00E82FD8 /* MessageViewController.m in Sources */,
+				BCD4A64D19EFB3E300C915BF /* WeiboModel.m in Sources */,
 				BC7FFF8419EBE3FB00E82FD8 /* WXBaseModel.m in Sources */,
 				BC7F03A719EBFA0100E82FD8 /* SinaWeiboAuthorizeView.m in Sources */,
 				BC7F038319EBE7E700E82FD8 /* ProfileViewController.m in Sources */,
@@ -2545,15 +2571,19 @@
 				BC764C6119EE93CE001A5CDA /* UIFactory.m in Sources */,
 				BC7F03A819EBFA0100E82FD8 /* SinaWeiboRequest.m in Sources */,
 				BC7F036519EBE68F00E82FD8 /* BaseNavigationController.m in Sources */,
+				BCD4A65019EFB77A00C915BF /* UserModel.m in Sources */,
 				BC7F035619EBE54900E82FD8 /* RTLabel.m in Sources */,
 				BCD4A64819EF6C6200C915BF /* ThemeLabel.m in Sources */,
 				BC764C6419EEA318001A5CDA /* ThemeImageView.m in Sources */,
 				BC7F036A19EBE6CE00E82FD8 /* MoreViewController.m in Sources */,
 				BC7FFF5C19EBE3B300E82FD8 /* main.m in Sources */,
+				BCD4A65619EFE41700C915BF /* WeiboView.m in Sources */,
 				BC764C5919EE72C1001A5CDA /* ThemeButton.m in Sources */,
 				BC7F034D19EBE46A00E82FD8 /* UIButton+WebCache.m in Sources */,
 				BC7F033419EBE45A00E82FD8 /* UIUtils.m in Sources */,
+				BCD4A65919EFE42C00C915BF /* WeiboCell.m in Sources */,
 				BC7F034A19EBE46A00E82FD8 /* SDImageCache.m in Sources */,
+				BCD4A65319EFB8C700C915BF /* BaseModel.m in Sources */,
 				BC7F038719EBEFF000E82FD8 /* TabBarItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
