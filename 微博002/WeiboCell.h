@@ -8,8 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class WeiboModel;
+@class WeiboView;
 
-
+// 自定义微博 Cell
 @interface WeiboCell : UITableViewCell
+
+// 微博模型对象
+@property (nonatomic, retain) WeiboModel *weiboModel;
+
+// 转发的微博视图
+@property (nonatomic, retain) WeiboView  *weiboView;
 
 @end

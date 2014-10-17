@@ -15,6 +15,7 @@
 #import "CONSTS.h"
 #import "ThemeManager.h"
 
+
 @implementation AppDelegate
 
 - (void)_initSinaweibo
@@ -40,9 +41,10 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
+
     [self setTheme];
     
     _mainTabBar = [[MainTabBarController alloc] init];
@@ -57,7 +59,7 @@
     
     self.window.rootViewController = menu;
     [menu release];
-
+    
     return YES;
 }
 

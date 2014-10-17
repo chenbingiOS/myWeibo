@@ -34,7 +34,7 @@
         btn.frame = CGRectMake(0, 0, 24, 24);
         [btn addTarget:self action:@selector(btnAction) forControlEvents:UIControlEventTouchUpInside];
         UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:btn];
-        self.navigationItem.leftBarButtonItem = [item autorelease];
+        self.navigationItem.leftBarButtonItem = item;
     }
 }
 
@@ -60,13 +60,13 @@
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     SinaWeibo *sinaweibo = appDelegate.sinaweibo;
     return sinaweibo;
-}
+} // 获取 AppDelegate 中的 SinaWeibo 对象
 
 #pragma mark - Action
 - (void)btnAction
 {
     [self.navigationController popViewControllerAnimated:YES];
-}
+} // 点击返回按钮响应事件
 
 #pragma mark - Memory Manager
 - (void)didReceiveMemoryWarning

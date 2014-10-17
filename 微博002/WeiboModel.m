@@ -10,22 +10,22 @@
 
 @implementation WeiboModel
 
-+ (NSMutableArray *)parsingWithDataForDictionary:(NSDictionary *)dict
-{
-    NSArray *array = dict[@"statuses"];
-    NSMutableArray *arr = [[NSMutableArray alloc] init];
-    for (NSDictionary *dictTemp in array) {
-        
-        WeiboModel *model = [[WeiboModel alloc] init];
-        [model setValuesForKeysWithDictionary:dictTemp];
-        
-        [arr addObject:model];
-    }
-    return [arr autorelease];
-}
+//+ (NSMutableArray *)parsingWithDataForDictionary:(NSDictionary *)dict
+//{
+//    NSArray *array = dict[@"statuses"];
+//    NSMutableArray *arr = [[NSMutableArray alloc] init];
+//    for (NSDictionary *dictTemp in array) {
+//        
+//        WeiboModel *model = [[WeiboModel alloc] init];
+//        [model setValuesForKeysWithDictionary:dictTemp];
+//        
+//        [arr addObject:model];
+//    }
+//    return [arr autorelease];
+//}
 
 #pragma mark - #if 0
-#if 0
+
 - (NSDictionary *)attributeMapDictionary {
     NSDictionary *mapAtt = @{
                              @"createDate":@"created_at",
@@ -46,12 +46,11 @@
 - (void)setAttributes:(NSDictionary *)dataDic {
     //将字典数据根据映射关系填充到当前对象的属性上。
     [super setAttributes:dataDic];
-    
 
     NSDictionary *retweetDic = [dataDic objectForKey:@"retweeted_status"];
     if (retweetDic != nil) {
         WeiboModel *relWeibo = [[WeiboModel alloc] initWithDataDic:retweetDic];
-        self.relWeibo = relWeibo;
+        self.retweeted_status = relWeibo;
         [relWeibo release];
     }
     
@@ -63,7 +62,7 @@
     }
 
 }
-#endif
+
 
 
 

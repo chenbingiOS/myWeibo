@@ -9,9 +9,7 @@
 #import <Foundation/Foundation.h>
 //#import "WXBaseModel.h"
 
-#define __string(__k__)     @property (nonatomic, copy)     NSString     *(__k__)
-#define __number(__k__)     @property (nonatomic, retain)   NSNumber     *(__k__)
-#define __dictionary(__k__) @property (nonatomic, retain)   NSDictionary *(__k__)
+
 
 @interface BaseModel : NSObject
 

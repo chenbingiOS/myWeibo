@@ -6,12 +6,17 @@
 //  Copyright (c) 2014年 Glacier. All rights reserved.
 //
 
-#import "BaseModel.h"
+#import "WXBaseModel.h"
 #import "UserModel.h"
 
-@interface WeiboModel : BaseModel
+#define __string(__k__)     @property (nonatomic, copy)     NSString     *(__k__)
+#define __number(__k__)     @property (nonatomic, retain)   NSNumber     *(__k__)
+#define __dictionary(__k__) @property (nonatomic, retain)   NSDictionary *(__k__)
 
-#if 0
+@interface WeiboModel : WXBaseModel
+
+
+
 __string(createdDate);      // 微博创建时间
 __string(idstr);            // 字符串型的微博ID
 __string(text);             // 微博信息内容
@@ -28,63 +33,83 @@ __number(favorited);        // 是否已收藏，true：是，false：否
 __number(repostsCount);     // 转发数
 __number(commentsCount);    // 评论数
 
-@property (nonatomic, retain) WeiboModel *relWeibo; // 被转发的原微博信息字段，当该微博为转发微博时返回 详细
-@property (nonatomic, retain) UserModel  *user;     // 微博作者的用户信息字段 详细
-
-
-__string(createdDate);      // 微博创建时间
-__string(idstr);            // 字符串型的微博ID
-__string(text);             // 微博信息内容
-__string(source);           // 微博来源
-
-__string(thumbnail_pic);   // 缩略图片地址，没有时不返回此字段
-__string(bmiddleImage);     // 中等尺寸图片地址，没有时不返回此字段
-__string(originalImage);    // 原始图片地址，没有时不返回此字段
-
-__dictionary(geo);          // 地理信息字段 详细
-
-__number(favorited);        // 是否已收藏，true：是，false：否
-__number(repostsCount);     // 转发数
-__number(commentsCount);    // 评论数
-#endif
-
-
-
-
 @property (nonatomic, retain) WeiboModel *retweeted_status; // 被转发的原微博信息字段，当该微博为转发微博时返回 详细
 @property (nonatomic, retain) UserModel  *user;     // 微博作者的用户信息字段 详细
 
-__string(created_at);           // 	string 	微博创建时间
-//__number(id);                   // 	int64 	微博ID
-__number(mid);                  // 	int64 	微博MID
-__string(idstr);                // 	string 	字符串型的微博ID
-__string(text);                 // 	string 	微博信息内容
-__string(source);               // 	string 	微博来源
-__number(favorited);            // 	boolean 	是否已收藏，true：是，false：否
-__number(truncated);            // 	boolean 	是否被截断，true：是，false：否
-//__string(in_reply_to_status_id);// 	string 	（暂未支持）回复ID
-//__string(in_reply_to_user_id);  // 	string 	（暂未支持）回复人UID
-//__string(in_reply_to_screen_name);// 	string 	（暂未支持）回复人昵称
-__string(thumbnail_pic);        // 	string 	缩略图片地址，没有时不返回此字段
-__string(bmiddle_pic);          // 	string 	中等尺寸图片地址，没有时不返回此字段
-__string(original_pic);         // 	string 	原始图片地址，没有时不返回此字段
-__dictionary(geo);              // 	object 	地理信息字段 详细
-//user 	object 	微博作者的用户信息字段 详细
-//retweeted_status 	object 	被转发的原微博信息字段，当该微博为转发微博时返回 详细
-__number(reposts_count);        // 	int 	转发数
-__number(comments_count);       // 	int 	评论数
-__number(attitudes_count);      // 	int 	表态数
-//__number(mlevel);               // 	int 	暂未支持
-//visible 	object 	微博的可见性及指定可见分组信息。该object中type取值，0：普通微博，1：私密微博，3：指定分组微博，4：密友微博；list_id为分组的组号
-//pic_urls 	object 	微博配图地址。多图时返回多图链接。无配图返回“[]”
-//ad 	object array 	微博流内的推广微博ID
-
-
-+ (NSMutableArray *)parsingWithDataForDictionary:(NSDictionary *)dict;
-
-
-
 @end
+
+
+//__string(createdDate);      // 微博创建时间
+//__string(idstr);            // 字符串型的微博ID
+//__string(text);             // 微博信息内容
+//__string(source);           // 微博来源
+//
+//__string(thumbnail_pic);   // 缩略图片地址，没有时不返回此字段
+//__string(bmiddleImage);     // 中等尺寸图片地址，没有时不返回此字段
+//__string(originalImage);    // 原始图片地址，没有时不返回此字段
+//
+//__dictionary(geo);          // 地理信息字段 详细
+//
+//__number(favorited);        // 是否已收藏，true：是，false：否
+//__number(repostsCount);     // 转发数
+//__number(commentsCount);    // 评论数
+
+
+//#if 0
+//__string(createdDate);      // 微博创建时间
+//__string(idstr);            // 字符串型的微博ID
+//__string(text);             // 微博信息内容
+//__string(source);           // 微博来源
+//
+//__string(thumbnailImage);   // 缩略图片地址，没有时不返回此字段
+//__string(bmiddleImage);     // 中等尺寸图片地址，没有时不返回此字段
+//__string(originalImage);    // 原始图片地址，没有时不返回此字段
+//
+//__dictionary(geo);          // 地理信息字段 详细
+//
+//__number(weiboId);          // 微博ID
+//__number(favorited);        // 是否已收藏，true：是，false：否
+//__number(repostsCount);     // 转发数
+//__number(commentsCount);    // 评论数
+//
+//@property (nonatomic, retain) WeiboModel *relWeibo; // 被转发的原微博信息字段，当该微博为转发微博时返回 详细
+//@property (nonatomic, retain) UserModel  *user;     // 微博作者的用户信息字段 详细
+//#endif
+//
+
+//
+//#if 0
+//__string(created_at);           // 	string 	微博创建时间
+////__number(id);                   // 	int64 	微博ID
+//__number(mid);                  // 	int64 	微博MID
+//__string(idstr);                // 	string 	字符串型的微博ID
+//__string(text);                 // 	string 	微博信息内容
+//__string(source);               // 	string 	微博来源
+//__number(favorited);            // 	boolean 	是否已收藏，true：是，false：否
+//__number(truncated);            // 	boolean 	是否被截断，true：是，false：否
+////__string(in_reply_to_status_id);// 	string 	（暂未支持）回复ID
+////__string(in_reply_to_user_id);  // 	string 	（暂未支持）回复人UID
+////__string(in_reply_to_screen_name);// 	string 	（暂未支持）回复人昵称
+//__string(thumbnail_pic);        // 	string 	缩略图片地址，没有时不返回此字段
+//__string(bmiddle_pic);          // 	string 	中等尺寸图片地址，没有时不返回此字段
+//__string(original_pic);         // 	string 	原始图片地址，没有时不返回此字段
+//__dictionary(geo);              // 	object 	地理信息字段 详细
+////user 	object 	微博作者的用户信息字段 详细
+////retweeted_status 	object 	被转发的原微博信息字段，当该微博为转发微博时返回 详细
+//__number(reposts_count);        // 	int 	转发数
+//__number(comments_count);       // 	int 	评论数
+//__number(attitudes_count);      // 	int 	表态数
+////__number(mlevel);               // 	int 	暂未支持
+////visible 	object 	微博的可见性及指定可见分组信息。该object中type取值，0：普通微博，1：私密微博，3：指定分组微博，4：密友微博；list_id为分组的组号
+////pic_urls 	object 	微博配图地址。多图时返回多图链接。无配图返回“[]”
+////ad 	object array 	微博流内的推广微博ID
+//
+//#endif
+//
+//+ (NSMutableArray *)parsingWithDataForDictionary:(NSDictionary *)dict;
+
+
+
 
 /*
  返回值字段 	字段类型 	字段说明

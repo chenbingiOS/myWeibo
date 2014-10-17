@@ -12,6 +12,9 @@
 
 @property (nonatomic, copy) NSString *imageName;
 
+@property(nonatomic,assign)int leftCapWidth;
+@property(nonatomic,assign)int topCapHeight;
+
 - (id)initWithImageName:(NSString *)imageName;
 
 @end

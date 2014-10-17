@@ -9,7 +9,9 @@
 //
 
 #import "BaseViewController.h"
+ 
+@interface HomeViewController : BaseViewController <SinaWeiboRequestDelegate ,UITableViewDataSource, UITableViewDelegate>
 
-@interface HomeViewController : BaseViewController <SinaWeiboRequestDelegate>
+@property (retain, nonatomic) IBOutlet UITableView *tableView;
 
 @end

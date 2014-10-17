@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 Glacier. All rights reserved.
 //
 
-#import "BaseModel.h"
+#import "WXBaseModel.h"
 
-@interface UserModel :  BaseModel
+@interface UserModel :  WXBaseModel
 
 @property(nonatomic,copy)NSString *idstr;           //字符串型的用户UID
 @property(nonatomic,copy)NSString *screen_name;     //用户昵称
